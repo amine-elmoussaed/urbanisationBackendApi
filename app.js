@@ -93,3 +93,4 @@ app.post('/addnewad',(req,res) => {add_new_ad.add_new_ad(req,res)});
 
 app.post('/updatecompaign',(req,res) => {update_compaign.update_compaign(req,res)});
 
+app.get('/',(req,res) =>{ res.send('GODZILLAAAAAAAAAA')});
