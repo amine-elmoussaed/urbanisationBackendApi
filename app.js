@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
 const cors = require("cors");
 const Users=require('./models/user');
 const cookieParser = require('cookie-parser');
+require('dotenv').config();
 
 
 
@@ -19,7 +20,7 @@ const port=3000;
 
 /*La connection se fait avec ORM mongoose */
 mongoose.connect(db_url,{UseNewUrlParser: true})
-.then((result)=>app.listen(port, ()=>console.log("**** db connected then connection on socket 3000 ****")))
+.then((result)=>app.listen(process.env.PORT || 1337, ()=>console.log("**** db connected then connection on socket 3000 ****")))
 .catch((err)=>console.log(err)) ;
 
 
